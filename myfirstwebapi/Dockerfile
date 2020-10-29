@@ -8,18 +8,22 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
-WORKDIR /src
-COPY ["myfirstwebapi/myfirstwebapi.csproj", "myfirstwebapi/"]
-RUN dotnet restore "myfirstwebapi/myfirstwebapi.csproj"
-COPY . .
-WORKDIR "/src/myfirstwebapi"
-RUN dotnet build "myfirstwebapi.csproj" -c Release -o /app/build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 
-FROM build AS publish
-RUN dotnet publish "myfirstwebapi.csproj" -c Release -o /app/publish
-
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "myfirstwebapi.dll"]
+
+COPY *.csproj ./
+
+RUN dotnet restore
+
+COPY . ./
+
+RUN dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+
+WORKDIR /app
+
+COPY --from=build-env /app/out .
+
+ENTRYPOINT ["dotnet", "MyFirstWebApi.dll"]
