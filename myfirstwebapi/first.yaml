@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: WebAppDockerKuberRepos
-        image: WebAppDockerKuber.azurecr.io/azurerepo:latest
+        image: 849406dnazureacr.azurecr.io/azurerepo:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
