@@ -1,0 +1,9 @@
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\myfirstwebapi.csprojAssemblyReference.cache
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\myfirstwebapi.AssemblyInfoInputs.cache
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\myfirstwebapi.AssemblyInfo.cs
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\myfirstwebapi.RazorTargetAssemblyInfo.cache
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\staticwebassets\myfirstwebapi.StaticWebAssets.Manifest.cache
+C:\Users\himanshu\source\repos\myfirstwebapi\myfirstwebapi\obj\Debug\netcoreapp3.1\staticwebassets\myfirstwebapi.StaticWebAssets.xml

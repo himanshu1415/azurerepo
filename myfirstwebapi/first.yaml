@@ -1,0 +1,33 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: WebAppDockerKuber-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: WebAppDockerKuber
+  template:
+    metadata:
+      labels:
+        app: WebAppDockerKuber
+    spec:
+      containers:
+      - name: WebAppDockerKuberRepos
+        image: WebAppDockerKuber.azurecr.io/azurerepo:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: dsconfigsn
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: WebAppDockerKuber
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: WebAppDockerKuber
